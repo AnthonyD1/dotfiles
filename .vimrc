@@ -18,6 +18,9 @@ colorscheme railscasts
 
 let g:rspec_command = "!clear && bundle exec spring rspec {spec}"
 
+" use 256 colors in tmux
+set t_Co=256
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -32,6 +35,7 @@ Plugin 'tpope/vim-cucumber'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'posva/vim-vue'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-commentary'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -68,3 +72,10 @@ if executable('ag')
 
   let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 endif
+
+" Nerdtree-like config fot netrw
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
