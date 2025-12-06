@@ -13,9 +13,11 @@ set hlsearch
 set laststatus=2
 
 syntax enable
+" Use new regular expression engine
+set re=0
 set background=dark
 
-let g:rspec_command = "!clear && bundle exec spring rspec {spec}"
+let g:rspec_command = "!clear && bundle exec rspec {spec}"
 
 " use 256 colors in tmux
 set t_Co=256
@@ -36,6 +38,7 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'posva/vim-vue'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-commentary'
+Plugin 'instant-markdown/vim-instant-markdown'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
